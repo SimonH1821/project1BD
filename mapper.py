@@ -9,5 +9,5 @@ for line in sys.stdin:
         
         # Extracting hour from Violation Time (Format: HHMM(A/P))
         if len(violation_time) >= 4:
-            hour = violation_time[:2]  # Get first two characters as hour
+            hour = violation_time[:2] + violation_time[-1]  # Get first two characters as hour and the A/p for AM or PM
             print(f"{hour}\t1")
